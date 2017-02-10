@@ -1,0 +1,191 @@
+<html>
+<head>
+<title>test</title>
+<style>
+body {
+  background: #eff8ff;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.content {
+  position: absolute;
+  border-radius: 50%;
+  border: 1rem solid #fff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  overflow: hidden;
+  height: 50vh;
+  width: 50vh;
+}
+.content .sky {
+  background: -webkit-linear-gradient(#b3cfe7 10%, white);
+  background: linear-gradient(#b3cfe7 10%, white);
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.content .sky .sun {
+  background: #e6e6fa;
+  border-radius: 100%;
+  margin: 2em 1.5em;
+  padding: 10%;
+  width: 0;
+}
+.content .sky .clouds .c-1 {
+  -webkit-animation: move-clouds 10s linear infinite;
+          animation: move-clouds 10s linear infinite;
+  top: -2.4em;
+  left: 2em;
+  z-index: 2;
+}
+.content .sky .clouds .c-2 {
+  -webkit-animation: move-clouds 20s linear infinite;
+          animation: move-clouds 20s linear infinite;
+  top: -4.8em;
+  left: 2em;
+  z-index: 3;
+}
+.content .sky .clouds .c-3 {
+  -webkit-animation: move-clouds 30s linear infinite;
+          animation: move-clouds 30s linear infinite;
+  top: -7.2em;
+  left: 2em;
+  z-index: 4;
+}
+.content .sky .clouds .cloud {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  border-radius: 40%;
+  opacity: 0.75;
+  position: relative;
+  height: 1.25rem;
+  width: 5.75rem;
+}
+.content .sky .clouds .cloud:before, .content .sky .clouds .cloud:after {
+  content: '';
+  background: #fff;
+  border-radius: 42%;
+  left: 0.5em;
+  top: -1em;
+  position: absolute;
+  position: absolute;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+.content .sky .clouds .cloud:before {
+  width: 3em;
+  height: 2.3em;
+}
+.content .sky .clouds .cloud:after {
+  padding: 10%;
+  width: 1.5em;
+  height: 1em;
+  bottom: 1.5em;
+  left: auto;
+  right: 1em;
+}
+.content .mountains {
+  position: absolute;
+  width: 50vh;
+}
+.content .mountains .mountain {
+  position: absolute;
+  bottom: -10vh;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+  background: #85a2c8;
+  min-width: 29.41176vh;
+  min-height: 29.41176vh;
+  max-width: 29.41176vh;
+  max-height: 29.41176vh;
+  z-index: 1;
+}
+.content .mountains .mountain:nth-child(1) {
+  background: #a8bdd8;
+  min-width: 33.33333vh;
+  min-height: 33.33333vh;
+  max-width: 33.33333vh;
+  max-height: 33.33333vh;
+  z-index: 2;
+}
+.content .mountains .mountain.m-1 {
+  left: 9.5vh;
+}
+.content .mountains .mountain.m-2 {
+  left: -9.5vh;
+}
+.content .mountains .mountain.m-3 {
+  right: -9.5vh;
+}
+
+.logo-text {
+  color: #b3cfe7;
+  font-family: "Roboto";
+  font-size: 10vh;
+  font-weight: 300;
+  bottom: 1rem;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+@-webkit-keyframes move-clouds {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: -42%;
+  }
+}
+
+@keyframes move-clouds {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: -42%;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo-text">
+    cold logo
+  </div>
+  <div class="content">
+    <div class="sky">
+      <div class="sun"></div>
+      <div class="clouds">
+        <div class="cloud c-1"></div>
+        <div class="cloud c-2"></div>
+        <div class="cloud c-3"></div>
+      </div>
+    </div>
+    <div class="mountains">
+      <div class="mountain m-1"></div>
+      <div class="mountain m-2"></div>
+      <div class="mountain m-3"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
